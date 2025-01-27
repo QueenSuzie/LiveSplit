@@ -654,17 +654,7 @@ public partial class TimerForm : Form
 
     private void Hook_GamepadHookInitialized(object sender, EventArgs e)
     {
-        CheckForUpdates();
-    }
-
-    private void CheckForUpdates()
-    {
-        UpdateHelper.Update(this, () => Invoke(new Action(() => Process.GetCurrentProcess().Kill())),
-                    [
-                        new LiveSplitUpdateable(),
-                        UpdateManagerUpdateable.Instance,
-                        .. ComponentManager.ComponentFactories.Values,
-                        .. ComponentManager.RaceProviderFactories.Values, ]);
+        // Update helper was called here.
     }
 
     private void CurrentState_OnUndoSplit(object sender, EventArgs e)
