@@ -4,6 +4,10 @@
     <TargetFramework>net4.8.1</TargetFramework>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DebugType>none</DebugType>
+  </PropertyGroup>
+
   <ItemGroup>
     <ProjectReference Include="$(ComponentsPath)\LiveSplit.CurrentComparison\src\LiveSplit.CurrentComparison\LiveSplit.CurrentComparison.csproj" />
     <ProjectReference Include="$(ComponentsPath)\LiveSplit.Delta\src\LiveSplit.Delta\LiveSplit.Delta.csproj" />
